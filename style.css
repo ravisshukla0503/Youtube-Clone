@@ -1,0 +1,346 @@
+*{
+    font-family: 'Hind Siliguri', sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    background: whitesmoke;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.flex-box{
+    display: flex;
+    align-items: center;
+}
+i{
+    cursor: pointer;
+}
+img{
+    cursor: pointer;
+}
+header{
+    background: #fff;
+    height: 60px;
+    padding: 10px 2%;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10px;
+    margin: 1px;
+}
+.left-part .fab{
+    font-size: 24px;
+    color: red;
+}
+.left-part .fas{
+    font-size: 24px;
+    margin-right: 30px;
+}
+.left-part span{
+    margin-left: 4px;
+    font-weight: 600;
+    color: #000000;
+}
+.right-part i{
+    font-size: 22px;
+    margin-right: 35px;
+}
+.right-part .users{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    background: whitesmoke
+}
+
+.center-part .search-bar{
+    border: 1px solid #d4d4d4;
+    margin-right: 20px;
+    width: 500px;
+    height: 35px;
+    border-radius: 2px;
+    outline: none;
+}
+.center-part .search-bar input{
+    border: 0 solid #d4d4d4;
+    width: 85%;
+    height: 100%;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 0 10px;
+    outline: none;
+}
+.center-part .search-bar .search-btn{
+    width: 15%;
+    height: 100%;
+    border: 0 solid #d4d4d4;
+    background: whitesmoke;
+    font-size: 20px;
+    outline: none;
+}
+.center-part .fa-microphone{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    background: whitesmoke
+}
+
+/*-----------second part:side-bar -----------*/
+
+.side-bar{
+    height: 100vh;
+    width: 15%;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: 80px;
+    padding-top: 0;
+    white-space: nowrap;
+    overflow-y: scroll;
+}
+.side-bar .menu-item{
+    padding: 8px;
+    margin: 1%;
+}
+.side-bar i{
+    font-size: 22px;
+    width: 40px;
+    padding: 10px;
+}
+.side-bar .menu-item:hover{
+    background-color: #dcdcdc;
+    cursor: pointer;
+}
+hr{
+    border: 0;
+    border-bottom: 1px solid #d4d4d4;
+    margin: 15px ;
+}
+
+/*webkit scrollbar used for design scrollbars but when first we use overflow: scrollbar */
+
+::-webkit-scrollbar{
+    width: 8px;
+    height: 100px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: #bbbbbb;
+    border-radius: 10px;
+}
+.resize-sidebar{
+    width: 5%;
+}
+
+/*--------------------------Third part: Page Content------------------------------>*/
+
+.video-container{
+    padding-left: 16%;
+    padding-right: 1%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.all-videos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-column-gap: 15px;
+    grid-row-gap: 30px;
+    margin-top: 10px;
+}
+.single-video .thumb{
+    width: 100%;
+    border-radius: 2%;
+}
+.single-video .flex-box img{
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 5px;
+    width: 35px;
+}
+.single-video .flex-box{
+    margin-top: 5px;
+    align-items: flex-start;
+}
+.single-video{
+    font-size: 16px;
+    color: #6e6e6e;
+}
+.single-video a{
+    font-weight: 500;
+    display: block;
+}
+.wide-video-container{
+    padding-left: 6%;
+}
+
+/*------------------third part: Responsive page--------------------------*/
+
+@media (max-width:800px){
+    .left-part .fas{
+        font-size: 20px;
+        margin-right: 8px;
+        margin-left: 4px;
+    }
+    .left-part .fab{
+        font-size: 20px;
+    }
+    .center-part .search-bar{
+        width: fit-content;
+        margin-left: 2%;
+         }
+    .center-part .search-bar .search-btn{
+            width: 25px;
+            font-size: 18px;
+            padding: 5px;
+        }
+     .center-part .fa-microphone{
+            display: none;
+        }
+        .right-part i{
+            display: none;
+        }
+        .right-part .users{
+            margin-right: 4px;
+            font-size: 20px;
+            display: block;
+        }
+        .side-bar{
+            height: 100%;
+            width: 150px;
+        }
+        .side-bar .menu-item{
+            padding: 2px;
+        }
+        .side-bar i{
+            font-size: 20px;
+            width: 22px;
+            padding: 5px;       
+         }
+         .resize-sidebar{
+             width: 0;
+         }
+         .video-container{
+             padding: 3%;
+         }
+
+}
+
+/*---------------------------video-page------------------------------------*/
+
+.for-video-page{
+    padding: 1% 1%;
+}
+.two-parts{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+}
+.running-video{
+     flex-basis: 65%;
+}
+.suggested-video{
+      flex-basis: 34%;
+}
+.running-video video{
+    width: 100%;
+}
+.running-video .video-information{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+.video-information p{
+      color: #6a6a6a;
+}
+.running-video .video-information i{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px;
+}
+.running-video .video-information span{
+    font-size: 18px;
+    padding: 2px;
+}
+.you-tuber{
+    display: flex;
+    align-items: center;
+}
+.you-tuber img{
+    width: 45px;
+    margin-right: 12px;
+    border-radius: 50%;
+}
+.you-tuber p{
+    font-size: 18px;
+    font-weight: 600;
+}
+.you-tuber span{
+    color: #6a6a6a;
+}
+.you-tuber div{
+    flex: 0.98;
+}
+.you-tuber button{
+    outline: 0;
+    border: 0;
+    color: white;
+    background: red;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+}
+.video-description{
+    margin: 10px 0;
+    padding-left: 25px;
+    line-height: 60px;
+}
+.video-comment{
+    padding-left: 2%;
+}
+.video-comment span{
+    padding: 5px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.add-comments{
+    display: flex;
+    align-items: center;
+    margin: 30px 5px;
+}
+.add-comments img{
+    border-radius: 50%;
+    margin-right: 12px;
+    width: 40px;
+}
+.add-comments input{
+    width: 100%;
+    background: none;
+    font-size: 18px;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #d4d4d4;
+}
+.single-suggested-video{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+.single-suggested-video img{
+    width: 100%;
+    border-radius: 2px;
+}
+.single-suggested-video .thumbnail{
+    flex-basis: 50%;
+}
+.single-suggested-video .video-details{
+    flex-basis: 49%;
+}
+
+
